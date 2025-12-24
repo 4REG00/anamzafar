@@ -133,42 +133,144 @@
         }
 
         .text-crush {
-          font-size: 0.8rem;
-          line-height: 23px;
-        }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Lifeline</title>
+  <link rel="icon" href="../img/CJM.png">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Poppins:400,600&display=swap" rel="stylesheet">
 
-        #yours {
-          font-size: 1rem;
-        }
+  <!-- jQuery -->
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <!-- Typed.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
-        .footer-text {
-          font-size: 1.4rem;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="content">
-        <div class="text">
-          <i class="fa-solid fa-heart"></i>To Anam!<i
-            class="fa-solid fa-heart"
-          ></i>
-        </div>
-        <div class="text-crush" id="text-crush"></div>
-        <div id="yours">- Truly Yours 💗</div>
+  <style>
+    body {
+      background: linear-gradient(135deg, #1c1c1c, #111111);
+      color: #f2f2f2;
+      font-family: 'Poppins', Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    main {
+      width: 90%;
+      max-width: 800px;
+    }
+
+    .browser {
+      background: rgba(0,0,0,0.75);
+      box-shadow: 0 0 25px rgba(77,166,255,0.4);
+      border-radius: 12px;
+      padding: 30px;
+    }
+
+    .browserbar {
+      height: 30px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .browserbar button {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+    }
+
+    .close { background: #ff5f56; }
+    .min { background: #ffbd2e; }
+    .max { background: #27c93f; }
+
+    #space p {
+      font-size: 20px; /* readable size */
+      line-height: 1.8;
+    }
+
+    .word {
+      font-family: 'Amatic SC', cursive;
+      font-size: 28px;
+      color: #4da6ff;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    strong {
+      font-size: 28px;
+    }
+
+    a {
+      font-family: 'Amatic SC', cursive;
+      font-size: 22px;
+      color: #4da6ff;
+      text-decoration: none;
+      padding: 4px 10px;
+      border-bottom: 2px solid rgba(77,166,255,0.4);
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      color: #ffffff;
+      border-bottom: 2px solid #4da6ff;
+      letter-spacing: 2px;
+      text-shadow: 0 0 8px rgba(77,166,255,0.8);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section class="browser">
+      <div class="browserbar">
+        <button class="close"></button>
+        <button class="min"></button>
+        <button class="max"></button>
       </div>
 
-      <!-- FOOTER -->
-      <footer>
-        <div class="footer-text"><a href="https://alphaxbyte.serv00.net/bash.html" target="_blank" class="alpha-link">Read More</a></div>
-      </footer>
-    </div>
+      <div id="space">
+        <div id="typed-strings">
+          <p>
+            <strong>Dear Anam,</strong><br><br>
+            From the moment I met you, my world became <span class="word">brighter</span> and more beautiful. Your kindness and intelligence amaze me every day. Your laughter is the <span class="word">sweetest sound</span>, which I really fell for. You are my greatest love. I would be incredibly lucky to have you in my life. I just can't express my feelings in person, so I used this code. I purely have feelings for you and just want you to be in my <span class="word">Nikkah</span>. If it's yes, I would do anything to achieve you. Otherwise, I would go out with a heavy heart. I really want you to be my spouse. I am here to clarify that I have no other intentions than Nikkah.<br><br>
+            I would impatiently wait for your response. <span class="word">If you are facing any problem while contacting me, like unavailability of personal phone, make sure to give me at least a hint about that.</span><br><br>
+            Here are some channels to get in touch. Just click on them and they will redirect you to the chosen channel:<br>
+            Instagram @silentreignops OR <a href="https://www.instagram.com/silentreignops/">Click Here</a><br>
+            Whatsapp +923146314235 OR <a href="https://wa.me/923146314235">Click Here</a><br><br>
+            Allah Hafiz<br><br>
+            <span class="word">Click on the blue text if you want to read more</span><br>
+            <a href="https://alphaxbyte.serv00.net/github.html" style="font-family: Georgia, serif; font-size: 14px; color: #ffffff; text-decoration: none; padding: 8px 16px; background-color: #2c3e50; border-radius: 5px; display: inline-block; transition: background-color 0.3s;">Discover More</a>
+          </p>
+        </div>
 
-    <script src="https://cdn.jsdelivr.net/gh/zyoushuo/Blog/hexo/js/clicklove.js"></script>
-    <script>
-      const text = `After several years of rejecting the feelings of love. I thought I could never love anyone. I had gotten used to doing everything alone for a very long time. So long that I can't even remember the exact time anymore. But then fate brought me to you and I liked you before I even realized it.I couldn't stop myself from falling for you, being close to you. Each day that passed, my feelings grew stronger. I couldn't stop myself from thinking about you, from loving you. It seems like this heart isn't mine anymore. Why doesn't it listen to me?
-It's really hard to stand in front of you and tell you that I love you. That's why I'm sitting here writing these lines. Will you be mine, Anum? I love you unconditionally, no matter what happens, I still hope the person I want to walk with in this life is you! There no intention of mine like Situationship etc, I just want you to be in my Nikkah.`;
+        <span id="typed"></span>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Typed.js initialization
+    var typed = new Typed('#typed', {
+      stringsElement: '#typed-strings',
+      typeSpeed: 40,
+      backSpeed: 0,
+      fadeOut: false,
+      loop: false,
+      showCursor: true
+    });
+  </script>
+</body>
+</html>d to stand in front of you and tell you that I love you. That's why I'm sitting here writing these lines. Will you be mine, Anum? I love you unconditionally, no matter what happens, I still hope the person I want to walk with in this life is you! There no intention of mine like Situationship etc, I just want you to be in my Nikkah.`;
       let index = 0;
       const speed = 50;
 
