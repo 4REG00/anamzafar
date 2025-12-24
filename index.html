@@ -1,88 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="title" content="Nikkah Proposal| 01 " />
-
-    <link rel="website icon" type="png" href="heart.png" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <title>Nikkah Proposal| 01</title>
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="items"></div>
-      <div id="text" onclick="buttun();">👉Click Me!👈</div>
-      <div class="traitym">
-        <svg
-          id="Layer_1"
-          data-name="Layer 1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1875.93 493.34"
-        >
-          <defs>
-            <style>
-              .cls-1 {
-                fill: #fff;
-              }
-              .cls-1,
-              .cls-2 {
-                stroke: #231f20;
-                stroke-miterlimit: 10;
-              }
-              .cls-2 {
-                fill: none;
-              }
-              .cls-3 {
-                fill: #ed1c24;
-              }
-            </style>
-          </defs>
-          <polyline
-            class="cls-1"
-            points="0 345.73 337.04 345.73 414.81 171.65 474.07 490.17 511.11 212.4 559.26 436.47 603.7 180.17 642.59 330.91 981.48 330.91 1294.44 330.91 1368.52 216.1 1459.26 447.58 1529.63 90.17 1614.82 323.51 1875.93 323.51"
-          />
-     
-      </div>
-      <div class="img">
-  <a href="https://anamzafar.vercel.app/index2.html">
-    <img src="rinky.png" alt="Click to open link" />
-  </a>
-</div>
-
-      <div class="content-wrapper">
-        <div class="content">
-          <div class="text1">HeartBeat</div>
-          <span id="number">10000</span>
-        </div>
-      </div>
-      <div class="container">
-        <div class="toast">
-          <div class="toast-wrapper">
-            <div class="img-crush">
-              <img src="crush.png" alt="" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikkah Proposal | Divine Union</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Amiri', serif;
+            background: linear-gradient(135deg, #0f1419 0%, #1a252f 50%, #2c3e50 100%);
+            color: #ecf0f1;
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 80%, rgba(243, 156, 18, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(231, 76, 60, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(39, 174, 96, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        .floating-hearts {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        .heart {
+            position: absolute;
+            font-size: 2rem;
+            color: #f39c12;
+            animation: float 10s linear infinite;
+            opacity: 0.7;
+        }
+        .heart:nth-child(odd) { animation-delay: -5s; }
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); }
+            100% { transform: translateY(-100px) rotate(360deg); }
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            position: relative;
+            z-index: 1;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: slideInFromTop 1s ease-out;
+        }
+        .header h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4rem;
+            color: #f39c12;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+            margin-bottom: 10px;
+        }
+        .header .arabic {
+            font-size: 2.5rem;
+            color: #e74c3c;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .verse-section {
+            background: rgba(0,0,0,0.6);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            margin-bottom: 40px;
+            max-width: 800px;
+            text-align: center;
+            border: 2px solid #f39c12;
+            animation: fadeInUp 1.5s ease-out;
+        }
+        .verse-section .verse {
+            font-size: 1.4rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        .verse-section .reference {
+            font-size: 1.1rem;
+            color: #f39c12;
+            font-style: italic;
+        }
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            animation: fadeInUp 2s ease-out;
+        }
+        .call-to-action {
+            font-size: 1.8rem;
+            color: #ecf0f1;
+            background: linear-gradient(45deg, #f39c12, #e74c3c);
+            padding: 20px 40px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .call-to-action:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.5);
+            background: linear-gradient(45deg, #e74c3c, #f39c12);
+        }
+        .heart-svg {
+            width: 100%;
+            max-width: 1000px;
+            margin: 20px 0;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .profile-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 6px solid #f39c12;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            cursor: pointer;
+        }
+        .profile-img:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.7);
+        }
+        .heartbeat {
+            background: rgba(0,0,0,0.6);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            text-align: center;
+            margin: 20px 0;
+        }
+        .heartbeat .label {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .heartbeat .number {
+            font-size: 3rem;
+            color: #e74c3c;
+            font-weight: bold;
+            animation: beat 1s infinite;
+        }
+        @keyframes beat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        .toast-notification {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: rgba(0,0,0,0.9);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            max-width: 350px;
+            animation: slideInFromRight 1s ease-out;
+            z-index: 1000;
+        }
+        .toast-notification .crush-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 3px solid #f39c12;
+        }
+        .toast-notification .message {
+            flex: 1;
+            color: #ecf0f1;
+            font-size: 1rem;
+        }
+        .toast-notification .icon {
+            color: #f39c12;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .toast-notification .icon:hover {
+            color: #e74c3c;
+        }
+        @keyframes slideInFromTop {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes slideInFromRight {
+            from { transform: translateX(100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2.5rem; }
+            .header .arabic { font-size: 1.8rem; }
+            .verse-section { padding: 20px; font-size: 1.1rem; }
+            .call-to-action { font-size: 1.4rem; padding: 15px 30px; }
+            .profile-img { width: 140px; height: 140px; }
+            .heartbeat .number { font-size: 2.5rem; }
+            .toast-notification { bottom: 20px; right: 20px; max-width: 280px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-hearts" id="hearts-container"></div>
+    <div class="container">
+        <header class="header">
+            <h1>Nikkah Proposal</h1>
+            <div class="arabic">اقتراح الزواج</div>
+        </header>
+        
+        <section class="verse-section">
+            <p class="verse">"And of His signs is that He created for you from yourselves mates that you may find tranquility in them; and He placed between you affection and mercy. Indeed in that are signs for a people who give thought."</p>
+            <p class="reference">— Surah Ar-Rum (30:21)</p>
+        </section>
+        
+        <main class="main-content">
+            <a href="https://anamzafar.vercel.app/index2.html" class="call-to-action">Reveal My Heart</a>
+            
+            <div class="heart-svg">
+                <svg viewBox="0 0 1875.93 493.34" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#f39c12;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#e74c3c;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                                    </svg>
             </div>
-            <div class="text-crush">
-              <p>I have something to say. Click on the letter to read it!</p>
-            </div>
-            <div class="icon" onclick="mail();">
-              <i class="fa-regular fa-envelope"></i>
-            </div>
-          </div>
-        </div>
-      </div>
+            
+          
+            
+            
+        </main>
     </div>
-
-    <script src="./java.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/gh/zyoushuo/Blog/hexo/js/clicklove.js"></script>
-  </body>
+    
+  
+    <script>
+        // Generate floating hearts
+        function createHearts() {
+            const container = document.getElementById('hearts-container');
+            for (let i = 0; i < 20; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.innerHTML = '❤️';
+                heart.style.left = Math.random() * 100 + '%';
+                heart.style.animationDuration = (Math.random() * 5 + 5) + 's';
+                container.appendChild(heart);
+            }
+        }
+        
+      
+        
+        // Open message function
+            
+        // Initialize
+        window.onload = function() {
+            createHearts();
+            animateHeartbeat();
+        };
+    </script>
+</body>
 </html>
