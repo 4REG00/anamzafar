@@ -6,14 +6,6 @@
   <link rel="icon" href="../img/CJM.png">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 
-  <!-- jQuery -->
-  <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-  <!-- Typed.js library -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
   <style>
     * {
       margin: 0;
@@ -150,6 +142,12 @@
       line-height: 1.9;
       color: #e8e8e8;
       font-weight: 300;
+      animation: fadeIn 1.2s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     .word {
@@ -199,16 +197,6 @@
       box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
     }
 
-    .typed-cursor {
-      color: #f39c12;
-      animation: blink 0.7s infinite;
-    }
-
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
-    }
-
     /* Responsive */
     @media (max-width: 768px) {
       .browser {
@@ -242,52 +230,48 @@
       </div>
 
       <div id="space">
-        <div id="typed-strings">
-          <p>
-            <strong>Dear Anam,</strong><br><br>
-            From the moment I met you, my world became <span class="word">brighter</span> and more beautiful. Your kindness and intelligence amaze me every day. Your laughter is the <span class="word">sweetest sound</span>, which I really fell for. You are my greatest love. I would be incredibly lucky to have you in my life. I just can't express my feelings in person, so I used this code. I purely have feelings for you and just want you to be in my <span class="word">Nikkah</span>. If it's yes, I would do anything to achieve you. Otherwise, I would go out with a heavy heart. I really want you to be my spouse. I am here to clarify that I have no other intentions than Nikkah.<br><br>
-            I would impatiently wait for your response. <span class="word">If you are facing any problem while contacting me, like unavailability of personal phone, make sure to give me at least a hint about that.</span><br><br>
-            Here are some channels to get in touch. Just click on them and they will redirect you to the chosen channel:<br>
-            Instagram @silentreignops OR <a href="https://www.instagram.com/silentreignops/">Click Here</a><br>
-            Whatsapp +923146314235 OR <a href="https://wa.me/923146314235">Click Here</a><br><br>
-            Allah Hafiz<br><br>
-            <span class="word">Click below if you want to read more</span><br>
-            <a href="https://alphaxbyte.serv00.net/a.html"
-               style="
-                 font-family: 'Poppins', sans-serif;
-                 font-size: 18px;
-                 font-weight: 600;
-                 color: #ffffff;
-                 text-decoration: none;
-                 padding: 16px 40px;
-                 background: linear-gradient(135deg, #f39c12, #e74c3c);
-                 border-radius: 50px;
-                 display: inline-block;
-                 margin-top: 15px;
-                 letter-spacing: 1px;
-                 box-shadow: 0 10px 30px rgba(243, 156, 18, 0.4);
-                 transition: all 0.4s ease;
-                 border: none;
-                 text-transform: uppercase;
-               "
-               onmouseover="
-                 this.style.transform='translateY(-5px) scale(1.05)';
-                 this.style.boxShadow='0 15px 40px rgba(243, 156, 18, 0.6)';
-                 this.style.background='linear-gradient(135deg, #e74c3c, #f39c12)';
-                 this.style.letterSpacing='2px';
-               "
-               onmouseout="
-                 this.style.transform='translateY(0) scale(1)';
-                 this.style.boxShadow='0 10px 30px rgba(243, 156, 18, 0.4)';
-                 this.style.background='linear-gradient(135deg, #f39c12, #e74c3c)';
-                 this.style.letterSpacing='1px';
-               ">
-               ✨ Discover More
-            </a>
-          </p>
-        </div>
-
-        <span id="typed"></span>
+        <p>
+          <strong>Dear Anam,</strong><br><br>
+          From the moment I met you, my world became <span class="word">brighter</span> and more beautiful. Your kindness and intelligence amaze me every day. Your laughter is the <span class="word">sweetest sound</span>, which I really fell for. You are my greatest love. I would be incredibly lucky to have you in my life. I just can't express my feelings in person, so I used this code. I purely have feelings for you and just want you to be in my <span class="word">Nikkah</span>. If it's yes, I would do anything to achieve you. Otherwise, I would go out with a heavy heart. I really want you to be my spouse. I am here to clarify that I have no other intentions than Nikkah.<br><br>
+          I would impatiently wait for your response. <span class="word">If you are facing any problem while contacting me, like unavailability of personal phone, make sure to give me at least a hint about that.</span><br><br>
+          Here are some channels to get in touch. Just click on them and they will redirect you to the chosen channel:<br>
+          Instagram @silentreignops OR <a href="https://www.instagram.com/silentreignops/">Click Here</a><br>
+          Whatsapp +923146314235 OR <a href="https://wa.me/923146314235">Click Here</a><br><br>
+          Allah Hafiz<br><br>
+          <span class="word">Click on the blue text if you want to read more</span><br>
+          <a href="https://alphaxbyte.serv00.net/github.html"
+             style="
+               font-family: 'Poppins', sans-serif;
+               font-size: 18px;
+               font-weight: 600;
+               color: #ffffff;
+               text-decoration: none;
+               padding: 16px 40px;
+               background: linear-gradient(135deg, #f39c12, #e74c3c);
+               border-radius: 50px;
+               display: inline-block;
+               margin-top: 15px;
+               letter-spacing: 1px;
+               box-shadow: 0 10px 30px rgba(243, 156, 18, 0.4);
+               transition: all 0.4s ease;
+               border: none;
+               text-transform: uppercase;
+             "
+             onmouseover="
+               this.style.transform='translateY(-5px) scale(1.05)';
+               this.style.boxShadow='0 15px 40px rgba(243, 156, 18, 0.6)';
+               this.style.background='linear-gradient(135deg, #e74c3c, #f39c12)';
+               this.style.letterSpacing='2px';
+             "
+             onmouseout="
+               this.style.transform='translateY(0) scale(1)';
+               this.style.boxShadow='0 10px 30px rgba(243, 156, 18, 0.4)';
+               this.style.background='linear-gradient(135deg, #f39c12, #e74c3c)';
+               this.style.letterSpacing='1px';
+             ">
+             ✨ Discover More
+          </a>
+        </p>
       </div>
     </section>
   </main>
@@ -308,17 +292,6 @@
     }
 
     createHearts();
-
-    // Typed.js initialization
-    var typed = new Typed('#typed', {
-      stringsElement: '#typed-strings',
-      typeSpeed: 30,
-      backSpeed: 0,
-      fadeOut: false,
-      loop: false,
-      showCursor: true,
-      cursorChar: '|'
-    });
   </script>
 </body>
 </html>
