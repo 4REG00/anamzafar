@@ -340,41 +340,319 @@
                         </defs>
                     </svg>
                 </div>
-            </main>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nikkah Proposal | 01</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Amiri', serif;
+    background: linear-gradient(135deg, #0f1419 0%, #1a252f 50%, #2c3e50 100%);
+    color: #ecf0f1;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(circle at 20% 80%, rgba(243,156,18,.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(231,76,60,.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(39,174,96,.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* SHARED OVERLAY SCREEN */
+.transition-screen {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg, #0f1419 0%, #1a252f 50%, #2c3e50 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    transition: opacity 1s ease, visibility 1s ease;
+}
+
+.transition-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.proposal-box {
+    background: rgba(0,0,0,0.85);
+    padding: 50px;
+    border-radius: 30px;
+    border: 3px solid #f39c12;
+    box-shadow: 0 20px 40px rgba(0,0,0,.7);
+    text-align: center;
+    max-width: 600px;
+    animation: scaleIn .8s ease;
+}
+
+@keyframes scaleIn {
+    from {transform: scale(.7); opacity:0;}
+    to {transform: scale(1); opacity:1;}
+}
+
+.proposal-box h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: #f39c12;
+    margin-bottom: 20px;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {text-shadow: 2px 2px 4px rgba(0,0,0,.7);}
+    to {text-shadow: 0 0 20px #f39c12;}
+}
+
+.arabic-text {
+    font-size: 1.8rem;
+    color: #e74c3c;
+    margin-bottom: 25px;
+}
+
+.button-container {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.response-btn {
+    padding: 15px 40px;
+    font-size: 1.3rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.yes-btn {
+    background: linear-gradient(45deg,#27ae60,#2ecc71);
+    color: #fff;
+}
+
+.no-btn {
+    background: linear-gradient(45deg,#c0392b,#e74c3c);
+    color: #fff;
+}
+
+.yes-btn:hover { transform: scale(1.1); }
+.no-btn:hover { animation: shake .5s; }
+
+@keyframes shake {
+    25% {transform: translateX(-10px);}
+    75% {transform: translateX(10px);}
+}
+
+/* PASSWORD INPUT */
+input[type="password"] {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    border: 2px solid #f39c12;
+    background: rgba(0,0,0,.7);
+    color: #ecf0f1;
+    outline: none;
+    text-align: center;
+}
+
+/* MAIN CONTENT */
+.main-wrapper {
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s ease;
+}
+
+.main-wrapper.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.container {
+    max-width: 1200px;
+    min-height: 100vh;
+    padding: 20px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    color: #f39c12;
+}
+
+.header .arabic {
+    font-size: 2.5rem;
+    color: #e74c3c;
+}
+
+.verse-section {
+    background: rgba(0,0,0,.6);
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid #f39c12;
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 40px;
+}
+
+.call-to-action {
+    font-size: 1.6rem;
+    padding: 20px 40px;
+    border-radius: 50px;
+    background: linear-gradient(45deg,#f39c12,#e74c3c);
+    color: #fff;
+    text-decoration: none;
+    transition: .4s;
+}
+
+.call-to-action:hover {
+    transform: scale(1.1);
+}
+
+/* FLOATING HEARTS */
+.floating-hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+}
+
+.heart {
+    position: absolute;
+    font-size: 2rem;
+    animation: float 10s linear infinite;
+}
+
+@keyframes float {
+    from {transform: translateY(100vh);}
+    to {transform: translateY(-100px);}
+}
+</style>
+</head>
+
+<body>
+
+<!-- PASSWORD SCREEN -->
+<div class="transition-screen" id="passwordScreen">
+    <div class="proposal-box">
+        <h2>Private Access</h2>
+        <input type="password" id="passwordInput" placeholder="Enter Password">
+        <div class="button-container">
+            <button class="response-btn yes-btn" onclick="checkPassword()">Enter ✨</button>
+        </div>
+        <p id="errorMsg" style="display:none;color:#e74c3c;margin-top:15px;">
+            Incorrect password 💔
+        </p>
+    </div>
+</div>
+
+<!-- PROPOSAL SCREEN -->
+<div class="transition-screen hidden" id="transitionScreen">
+    <div class="proposal-box">
+        <div style="font-size:4rem;">💕</div>
+        <h2>Will you complete my Deen Anam!</h2>
+        <div class="arabic-text">هل ستكملين ديني يا أنعم؟</div>
+        <div class="button-container">
+            <button class="response-btn yes-btn" onclick="handleYes()">Yes ❤️</button>
+            <button class="response-btn no-btn" onclick="handleNo()">No</button>
         </div>
     </div>
-    
-    <script>
-        // Generate floating hearts
-        function createHearts() {
-            const container = document.getElementById('hearts-container');
-            for (let i = 0; i < 20; i++) {
-                const heart = document.createElement('div');
-                heart.className = 'heart';
-                heart.innerHTML = '❤️';
-                heart.style.left = Math.random() * 100 + '%';
-                heart.style.animationDuration = (Math.random() * 5 + 5) + 's';
-                container.appendChild(heart);
-            }
-        }
-        
-        // Handle Yes button
-        function handleYes() {
-            const transitionScreen = document.getElementById('transitionScreen');
-            const mainContent = document.getElementById('mainContent');
-            
-            // Hide transition screen
-            transitionScreen.classList.add('hidden');
-            
-            // Show main content after transition
-            setTimeout(() => {
-                mainContent.classList.add('visible');
-                createHearts();
-            }, 500);
-        }
-        
-        // Handle No button
-        function handleNo() {
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main-wrapper" id="mainContent">
+    <div class="floating-hearts" id="hearts-container"></div>
+
+    <div class="container">
+        <header class="header">
+            <h1>Nikkah Proposal</h1>
+            <div class="arabic">اقتراح الزواج</div>
+        </header>
+
+        <section class="verse-section">
+            <p>
+                "And of His signs is that He created for you from yourselves mates that you may find tranquility in them..."
+            </p>
+            <p style="color:#f39c12;">— Surah Ar-Rum (30:21)</p>
+        </section>
+
+        <a class="call-to-action" href="https://anamzafar.vercel.app/index2.html">
+            Click Here To Read More
+        </a>
+    </div>
+</div>
+
+<script>
+const correctPassword = "143";
+
+function checkPassword() {
+    const input = document.getElementById("passwordInput").value;
+    if (input === correctPassword) {
+        document.getElementById("passwordScreen").classList.add("hidden");
+        document.getElementById("transitionScreen").classList.remove("hidden");
+    } else {
+        document.getElementById("errorMsg").style.display = "block";
+    }
+}
+
+function handleYes() {
+    document.getElementById("transitionScreen").classList.add("hidden");
+    setTimeout(() => {
+        document.getElementById("mainContent").classList.add("visible");
+        createHearts();
+    }, 500);
+}
+
+function handleNo() {
+    const btn = document.querySelector(".no-btn");
+    btn.style.position = "fixed";
+    btn.style.left = Math.random() * (window.innerWidth - 200) + "px";
+    btn.style.top = Math.random() * (window.innerHeight - 100) + "px";
+    alert("Wo 'No' button click ni ho raha 😄");
+}
+
+function createHearts() {
+    const container = document.getElementById("hearts-container");
+    for (let i = 0; i < 20; i++) {
+        const h = document.createElement("div");
+        h.className = "heart";
+        h.innerHTML = "❤️";
+        h.style.left = Math.random() * 100 + "%";
+        h.style.animationDuration = (Math.random()*5+5)+"s";
+        container.appendChild(h);
+    }
+}
+</script>
+
+</body>
+</html>      function handleNo() {
             const noBtn = document.querySelector('.no-btn');
             const randomX = Math.random() * (window.innerWidth - 200);
             const randomY = Math.random() * (window.innerHeight - 100);
